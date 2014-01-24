@@ -36,7 +36,7 @@
         
         // Values
         cornerRadius = 5;
-        fieldBackgroundViewHeight = 42;
+        fieldBackgroundViewHeight = 46;
         titleLabelLeftPadding = 3;
         titleLabelRightPadding = 13;
         fieldWidth = size.width - 2 * fieldSidePadding;
@@ -128,7 +128,9 @@
 }
 
 -(void)actionFieldBackgroundTapped {
-    [self actionUnselectFieldBackground];
+    [self doBlock:^{
+        [self actionUnselectFieldBackground];
+    } afterDelay:0.2];
 }
 
 -(void)actionSelectFieldBackground {
@@ -153,7 +155,7 @@
 #pragma mark Actions
 
 -(void)fieldBackgroundViewTapped:(UITapGestureRecognizer *)tapges {
-    //[self selectFieldBackground];
+    // Override in subclasses
 }
 
 #pragma mark -
