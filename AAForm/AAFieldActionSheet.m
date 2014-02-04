@@ -29,8 +29,8 @@
     if (self) {
 
         self.visibleItems = 5;
-
-        dim = [[UIView alloc] initWithFrame:self.bounds];
+        
+        dim = [[UIView alloc] initWithFrame:CGRectMake(0, 0, size.width, size.height)];
         dim.backgroundColor = [UIColor blackColor];
         dim.alpha = 0;
         [self addSubview:dim];
